@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema(
     password: { type: String, default: null },
     googleId: { type: String, default: null },
     avatar: { type: String, default: null },
-    role: { type: String, enum: Object.values(ROLES), default: ROLES.USER },
+    role: { type: String, enum: Object.values(ROLES), default: ROLES.ADMIN },
   },
   { timestamps: { createdAt: true, updatedAt: true } }
 );

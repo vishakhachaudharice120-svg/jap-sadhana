@@ -30,7 +30,7 @@ async function register(req, res, next) {
     }
 
     const hashed = await bcrypt.hash(password, 10);
-    const user = await userRepository.create({ name, email, password: hashed, role: ROLES.USER });
+    const user = await userRepository.create({ name, email, password: hashed, role: ROLES.ADMIN });
     const token = signToken({ userId: user._id, role: user.role });
     return res.json(successResponse({ token, user }, 'Registered successfully'));
   } catch (err) {

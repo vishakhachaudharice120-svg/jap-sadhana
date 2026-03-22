@@ -60,7 +60,7 @@ passport.use(
             email,
             googleId: profile.id,
             avatar,
-            role: ROLES.USER,
+            role: ROLES.ADMIN,
           });
         } else if (!user.googleId) {
           user.googleId = profile.id;
